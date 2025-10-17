@@ -38,6 +38,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release;
         };
+
+        tap_hold: tap_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_HOLD";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -52,10 +61,10 @@
 
             display-name = "Main";
             bindings = <
-&kp DELETE  &kp Q            &kp W            &kp E          &kp R            &kp T                        &kp Y        &kp U         &kp I          &kp O        &kp P           &kp MINUS
-&kp ESCAPE  &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LSHIFT D  &HRL LCTRL F     &kp G                        &kp H        &HRR RCTRL J  &HRR RSHIFT K  &HRR RALT L  &HRR RGUI SEMI  &kp SQT
-&tog 4      &kp Z            &kp X            &kp C          &mt V LC(V)      &kp B                        &kp N        &kp M         &kp COMMA      &kp DOT      &kp FSLH        &kp BSLH
-                                              &none          &lt 2 BACKSPACE  &mt LS(LA(LG(LCTRL))) TAB    &lt 3 ENTER  &lt 1 SPACE   &none
+&kp DELETE     &kp Q            &kp W            &kp E          &kp R            &kp T                        &kp Y        &kp U         &kp I          &kp O        &kp P           &kp MINUS
+&kp ESCAPE     &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LSHIFT D  &HRL LCTRL F     &kp G                        &kp H        &HRR RCTRL J  &HRR RSHIFT K  &HRR RALT L  &HRR RGUI SEMI  &kp SQT
+&tap_hold 4 4  &kp Z            &kp X            &kp C          &HRL V LC(V)     &kp B                        &kp N        &kp M         &kp COMMA      &kp DOT      &kp FSLH        &kp BSLH
+                                                 &none          &lt 2 BACKSPACE  &mt LS(LA(LG(LCTRL))) TAB    &lt 3 ENTER  &lt 1 SPACE   &none
             >;
         };
 
