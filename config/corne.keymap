@@ -18,7 +18,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <18 18 19 20 21 22 23 30 31 32 33 34 35 6 7 8 9 10 11 20 39 40 41 36 37 38>;
         };
 
@@ -29,7 +29,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
         };
     };
@@ -47,8 +47,8 @@
             display-name = "Main";
             bindings = <
 &kp DELETE  &kp Q            &kp W            &kp E          &kp R            &kp T                        &kp Y        &kp U         &kp I          &kp O        &kp P           &kp MINUS
-&kp ESCAPE  &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LSHIFT D  &HRL LCTRL F     &kp G                        &kp H        &HRR RCTRL J  &HRR RSHIFT K  &HRR RALT L  &HRR RGUI SEMI  &kp BSLH
-&tog 4      &kp Z            &kp X            &kp C          &kp V            &kp B                        &kp N        &kp M         &kp COMMA      &kp DOT      &kp FSLH        &kp SQT
+&kp ESCAPE  &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LSHIFT D  &HRL LCTRL F     &kp G                        &kp H        &HRR RCTRL J  &HRR RSHIFT K  &HRR RALT L  &HRR RGUI SEMI  &kp SQT
+&tog 4      &kp Z            &kp X            &kp C          &kp V            &kp B                        &kp N        &kp M         &kp COMMA      &kp DOT      &kp FSLH        &kp BSLH
                                               &none          &lt 2 BACKSPACE  &mt LS(LA(LG(LCTRL))) TAB    &lt 3 ENTER  &lt 1 SPACE   &none
             >;
         };
@@ -60,23 +60,23 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "Symbs";
             bindings = <
 &kp LCTRL   &kp ASTERISK         &kp SLASH            &kp PLUS                &kp MINUS          &kp PRCNT         &kp AMPERSAND  &kp SEMICOLON     &kp LEFT_BRACKET             &kp RIGHT_BRACKET                 &kp DOLLAR                &kp TILDE
 &kp ESCAPE  &HRL LEFT_GUI COMMA  &HRL LALT BACKSLASH  &HRL LSHFT EXCLAMATION  &HRL LCTRL PERIOD  &kp QUESTION      &kp PIPE       &HRR RCTRL COLON  &HRR RSHFT LEFT_PARENTHESIS  &HRR RIGHT_ALT RIGHT_PARENTHESIS  &HRR RIGHT_GUI LESS_THAN  &kp GREATER_THAN
 &kp HASH    &kp CARET            &kp GRAVE            &kp SQT                 &kp DOUBLE_QUOTES  &kp AT_SIGN       &kp TILDE      &kp PERCENT       &kp LBRC                     &kp RBRC                          &kp EXCLAMATION           &kp EQUAL
-                                                      &kp SPACE               &lt 0 BACKSPACE    &kp UNDERSCORE    &lt 0 ENTER    &lt 1 SPACE       &none
+                                                      &kp SPACE               &kp BACKSPACE      &kp UNDERSCORE    &lt 0 ENTER    &lt 1 SPACE       &none
             >;
 
-            label = "Symbols";
+            label = "Symbs";
         };
 
         nums {
             bindings = <
-&trans   &trans    &trans        &trans     &trans     &trans    &trans     &kp N1  &kp N2  &kp N3  &kp LS(PLUS)  &kp MINUS
-&kp ESC  &kp LGUI  &kp LEFT_ALT  &kp LSHFT  &kp LCTRL  &trans    &trans     &kp N4  &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
-&trans   &trans    &trans        &trans     &trans     &trans    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT       &trans
-                                 &trans     &trans     &trans    &trans     &kp N0  &trans
+&trans   &kp LC(LS(T))  &kp LC(W)     &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &trans    &trans     &kp N1  &kp N2  &kp N3  &kp LS(PLUS)  &kp MINUS
+&kp ESC  &kp LGUI       &kp LEFT_ALT  &kp LSHFT         &kp LCTRL          &trans    &trans     &kp N4  &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
+&trans   &trans         &trans        &kp LC(LEFT)      &kp LC(RIGHT)      &trans    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT       &trans
+                                      &trans            &trans             &trans    &trans     &kp N0  &trans
             >;
 
             label = "Nums";
