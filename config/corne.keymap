@@ -61,10 +61,10 @@
 
             display-name = "Main";
             bindings = <
-&kp DELETE     &kp Q            &kp W            &kp E          &kp R            &kp T                        &kp Y        &kp U         &kp I          &kp O        &kp P           &kp MINUS
-&kp ESCAPE     &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LSHIFT D  &HRL LCTRL F     &kp G                        &kp H        &HRR RCTRL J  &HRR RSHIFT K  &HRR RALT L  &HRR RGUI SEMI  &kp SQT
-&tap_hold 4 4  &kp Z            &kp X            &kp C          &HRL LC(V) V     &kp B                        &kp N        &kp M         &kp COMMA      &kp DOT      &kp FSLH        &kp BSLH
-                                                 &none          &lt 2 BACKSPACE  &mt LS(LA(LG(LCTRL))) TAB    &lt 3 ENTER  &lt 1 SPACE   &none
+&kp DELETE     &kp Q            &kp W            &kp E                 &kp R            &kp T                        &kp Y        &kp U         &kp I                  &kp O        &kp P           &kp MINUS
+&kp ESCAPE     &HRL LEFT_GUI A  &HRL LEFT_ALT S  &HRL LSHIFT D         &HRL LCTRL F     &kp G                        &kp H        &HRR RCTRL J  &HRR RSHIFT K          &HRR RALT L  &HRR RGUI SEMI  &kp SQT
+&tap_hold 4 4  &kp Z            &kp X            &kp C                 &HRL LC(V) V     &kp B                        &kp N        &kp M         &kp COMMA              &kp DOT      &kp FSLH        &kp BSLH
+                                                 &kp LA(LS(LEFT_GUI))  &lt 2 BACKSPACE  &mt LS(LA(LG(LCTRL))) TAB    &lt 3 ENTER  &lt 1 SPACE   &kp RA(RS(RIGHT_GUI))
             >;
         };
 
@@ -77,10 +77,10 @@
 
             display-name = "Symbs";
             bindings = <
-&kp LCTRL   &kp ASTERISK         &kp SLASH            &kp PLUS                &kp MINUS          &kp PRCNT         &kp AMPERSAND  &kp SEMICOLON     &kp LEFT_BRACKET             &kp RIGHT_BRACKET                 &kp DOLLAR                &kp TILDE
+&kp LCTRL   &kp ASTERISK         &kp SLASH            &kp PLUS                &kp MINUS          &kp EQUAL         &kp AMPERSAND  &kp SEMICOLON     &kp LEFT_BRACKET             &kp RIGHT_BRACKET                 &kp DOLLAR                &kp TILDE
 &kp ESCAPE  &HRL LEFT_GUI COMMA  &HRL LALT BACKSLASH  &HRL LSHFT EXCLAMATION  &HRL LCTRL PERIOD  &kp QUESTION      &kp PIPE       &HRR RCTRL COLON  &HRR RSHFT LEFT_PARENTHESIS  &HRR RIGHT_ALT RIGHT_PARENTHESIS  &HRR RIGHT_GUI LESS_THAN  &kp GREATER_THAN
 &kp HASH    &kp CARET            &kp GRAVE            &kp SQT                 &kp DOUBLE_QUOTES  &kp AT_SIGN       &kp TILDE      &kp PERCENT       &kp LBRC                     &kp RBRC                          &kp EXCLAMATION           &kp EQUAL
-                                                      &kp SPACE               &kp BACKSPACE      &kp UNDERSCORE    &lt 0 ENTER    &lt 1 SPACE       &none
+                                                      &kp SPACE               &kp BACKSPACE      &kp UNDERSCORE    &lt 0 ENTER    &lt 1 SPACE       &trans
             >;
 
             label = "Symbs";
@@ -88,10 +88,10 @@
 
         nums {
             bindings = <
-&trans   &kp LC(LS(T))  &kp LC(W)     &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &trans    &trans     &kp N1  &kp N2  &kp N3  &kp LS(PLUS)  &kp MINUS
-&kp ESC  &kp LGUI       &kp LEFT_ALT  &kp LSHFT         &kp LCTRL          &trans    &trans     &kp N4  &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
-&trans   &trans         &trans        &kp LC(LEFT)      &kp LC(RIGHT)      &trans    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT       &trans
-                                      &trans            &trans             &trans    &trans     &kp N0  &trans
+&trans   &kp LC(LS(T))  &kp LC(W)     &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &trans    &kp CARET    &kp N1  &kp N2  &kp N3  &kp LS(PLUS)  &kp MINUS
+&kp ESC  &kp LGUI       &kp LEFT_ALT  &kp LSHFT         &kp LCTRL          &trans    &kp PERCENT  &kp N4  &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
+&trans   &trans         &trans        &kp LC(LEFT)      &kp LC(RIGHT)      &trans    &kp EQUAL    &kp N7  &kp N8  &kp N9  &kp DOT       &kp EQUAL
+                                      &trans            &trans             &trans    &trans       &kp N0  &trans
             >;
 
             label = "Nums";
